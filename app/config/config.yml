@@ -1,0 +1,119 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: @MaverickApiBundle/Resources/config/services.yml }
+
+framework:
+    secret: %secret%
+    charset: UTF-8
+    router: { resource: "%kernel.root_dir%/config/routing.yml" }
+    validation: { enable_annotations: true }
+    templating: { engines: ['twig'] }
+    session:
+        auto_start: false
+
+# Twig Configuration
+twig:
+    debug:            %kernel.debug%
+    strict_variables: %kernel.debug%
+    exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
+
+# Assetic Configuration
+assetic:
+    debug:          %kernel.debug%
+    use_controller: false
+    # java: /usr/bin/java
+    filters:
+        cssrewrite: ~
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver:   %database_driver%
+                host:     %database_host%
+                port:     %database_port%
+                dbname:   %database_name%
+                user:     %database_user%
+                password: %database_password%
+                charset:  UTF8
+                logging:  true
+                mapping_types:
+                    enum:       string
+                    binary:     string
+                    longblob:   string
+
+    orm:
+        entity_managers:
+            default:
+                connection: default
+                mappings:
+                    MaverickApiBundle: ~
+                dql:
+                    datetime_functions:
+                        DateAdd: Maverick\ApiBundle\DQL\DateAdd
+        auto_generate_proxy_classes: %kernel.debug%
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: %mailer_transport%
+    host:      %mailer_host%
+    username:  %mailer_user%
+    password:  %mailer_password%
+
+jms_security_extra:
+    secure_all_services: false
+    enable_iddqd_attribute: false
+    voters:
+        disable_acl: true
+        disable_role: false
+        disable_authenticated: false
+
+jms_serializer:
+    handlers:
+        object_based: false
+        datetime:
+            format: Y-m-d H:i:s
+            default_timezone: UTC
+        array_collection: true
+        form_error: true
+        constraint_violation: true
+    property_naming:
+        separator: _
+        lower_case: true
+    metadata:
+        cache: filters
+        debug: %kernel.debug%
+        file_cache:
+            dir: %kernel.cache_dir%/serializer
+        auto_detection: true
+
+jms_aop:
+    cache_dir: %kernel.cache_dir%/jms_aop
+
+fos_rest:
+    view:
+        formats:
+            json: true
+            html: false
+            xml: false
+            pdf: false
+    format_listener:
+        default_priorities: ['json', 'pdf', 'html']
+        fallback_format: json
+        prefer_extension: true
+    routing_loader:
+        default_format: json
+    exception:
+        codes:
+            'Symfony\Component\Security\Core\Exception\InsufficientAuthenticationException': 401
+
+leezy_pheanstalk:
+    enabled: true
+    connection:
+        primary:
+            server: 127.0.0.1
+            port: 11300
+            timeout: 60
+            default: true

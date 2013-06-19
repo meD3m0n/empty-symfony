@@ -1,0 +1,3 @@
+test:
+    type: rest
+    resource: Maverick\ApiBundle\Controller\TestController

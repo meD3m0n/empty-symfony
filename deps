@@ -1,0 +1,114 @@
+[symfony]
+    git=http://github.com/symfony/symfony.git
+    version=v2.0.23
+
+[twig]
+    git=http://github.com/fabpot/Twig.git
+    version=v1.10.3
+
+[monolog]
+    git=http://github.com/Seldaek/monolog.git
+    version=1.2.1
+
+[doctrine-common]
+    git=http://github.com/doctrine/common.git
+    version=2.1.4
+
+[doctrine-dbal]
+    git=http://github.com/doctrine/dbal.git
+    version=2.1.7
+
+[doctrine]
+    git=http://github.com/doctrine/doctrine2.git
+    version=2.1.7
+
+[doctrine-migrations]
+    git=http://github.com/doctrine/migrations.git
+
+[DoctrineMigrationsBundle]
+    git=http://github.com/doctrine/DoctrineMigrationsBundle.git
+    target=/bundles/Symfony/Bundle/DoctrineMigrationsBundle
+    version=origin/2.0
+
+[swiftmailer]
+    git=http://github.com/swiftmailer/swiftmailer.git
+    version=v4.2.2
+
+[assetic]
+    git=http://github.com/kriswallsmith/assetic.git
+    version=v1.0.4
+
+[twig-extensions]
+    git=http://github.com/fabpot/Twig-extensions.git
+    version=v1.0.0
+
+[SensioFrameworkExtraBundle]
+    git=http://github.com/sensio/SensioFrameworkExtraBundle.git
+    target=/bundles/Sensio/Bundle/FrameworkExtraBundle
+    version=v2.0.23
+
+[SensioDistributionBundle]
+    git=http://github.com/sensio/SensioDistributionBundle.git
+    target=/bundles/Sensio/Bundle/DistributionBundle
+    version=v2.0.23
+
+[SensioGeneratorBundle]
+    git=http://github.com/sensio/SensioGeneratorBundle.git
+    target=/bundles/Sensio/Bundle/GeneratorBundle
+    version=v2.0.23
+
+[AsseticBundle]
+    git=http://github.com/symfony/AsseticBundle.git
+    target=/bundles/Symfony/Bundle/AsseticBundle
+    version=origin/2.0
+
+[FOSRest]
+    git=git://github.com/FriendsOfSymfony/FOSRest.git
+    target=fos/FOS/Rest
+
+[FOSRestBundle]
+    git=git://github.com/FriendsOfSymfony/FOSRestBundle.git
+    target=bundles/FOS/RestBundle
+
+[JMSSerializerBundle]
+    git=git://github.com/schmittjoh/JMSSerializerBundle.git
+    target=bundles/JMS/SerializerBundle
+    version=0.9.0
+
+[aws-sdk]
+    git=https://github.com/amazonwebservices/aws-sdk-for-php.git
+
+[LeezyPheanstalkBundle]
+    git=git://github.com/armetiz/LeezyPheanstalkBundle
+    target=bundles/Leezy/PheanstalkBundle
+
+[Pheanstalk]
+    git=https://github.com/mrpoundsign/pheanstalk.git
+    target=/pheanstalk
+
+[buzz]
+    git=http://github.com/kriswallsmith/Buzz.git
+
+[SensioBuzzBundle]
+    git=http://github.com/sensio/SensioBuzzBundle.git
+    target=bundles/Sensio/Bundle/BuzzBundle
+
+[JMSSecurityExtraBundle]
+    git=https://github.com/schmittjoh/JMSSecurityExtraBundle.git
+    target=/bundles/JMS/SecurityExtraBundle
+
+[metadata]
+    git=https://github.com/schmittjoh/metadata.git
+    version=1.1.0 ;
+
+[JMSAopBundle]
+    git=https://github.com/schmittjoh/JMSAopBundle.git
+    target=/bundles/JMS/AopBundle
+
+[cg-library]
+    git=https://github.com/schmittjoh/cg-library.git
+
+[JMSDiExtraBundle]
+    git=https://github.com/schmittjoh/JMSDiExtraBundle.git
+    target=/bundles/JMS/DiExtraBundle
+    version=1.0.0
