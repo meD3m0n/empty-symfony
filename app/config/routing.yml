@@ -1,3 +1,7 @@
 test:
     type: rest
     resource: Maverick\ApiBundle\Controller\TestController
+
+notes:
+    type: rest
+    resource: Maverick\ApiBundle\Controller\NotesController

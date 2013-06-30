@@ -112,3 +112,7 @@
     git=https://github.com/schmittjoh/JMSDiExtraBundle.git
     target=/bundles/JMS/DiExtraBundle
     version=1.0.0
+
+[BerylliumCacheBundle]
+    git=https://github.com/practo/CacheBundle
+    target=bundles/Beryllium/CacheBundle

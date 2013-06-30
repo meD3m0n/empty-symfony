@@ -1,0 +1,8 @@
+parameters:
+services:
+  maverick_api.notes_manager:
+    class: Practo\ApiBundle\Manager\NoteManager
+    arguments:
+      - @doctrine
+      - @validator
+      - @security.context
